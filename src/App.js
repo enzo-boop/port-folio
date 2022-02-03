@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
