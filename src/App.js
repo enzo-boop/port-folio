@@ -1,10 +1,9 @@
 import React from 'react';
 import foto from './foto.jpg';
 import knowledge from './knowledge.png';
-import { useRef } from 'react';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin, Mailbox, Fingerprint, HandIndex, CodeSlash, PhoneVibrate} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin, Mailbox, HandIndex, PhoneVibrate} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
