@@ -3,7 +3,7 @@ import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin, Mailbox, HandIndex, PhoneVibrate, Mailbox2, Send} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
