@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin, Mailbox, HandIndex, PhoneVibrate} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin, Mailbox, HandIndex, PhoneVibrate, Mailbox2, Send} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
@@ -37,7 +37,7 @@ const Formazione = ()=>{
     <div className='Knowledges'>
       <div className='knowledgeswrapper' id='first'>
       <h1>Formazione</h1>
-      <img className='foto' height='350px' width='calc(350*16/9)' src={knowledge} alt='no available'/>
+      <img className='foto' height='280px' width='calc(350*16/9)' src={knowledge} alt='no available'/>
       </div>
       <div className='grid'>
       <div className='knowledgeswrapper'>
@@ -56,7 +56,7 @@ const Formazione = ()=>{
           dove poter finalmente iniziare l'esperienza che desidero.
         </p>
       </div>
-      <div className='knowledgeswrapper'>
+      <div id='last' className='knowledgeswrapper'>
         <span className='title'>Volontariato</span>
         <p>Ho frequentato per diversi anni il reparto R.O.S.S. (Reparto Operativo Soccorso Stabia) Di C/Mare di Stabia, ho imparato qui a relazionarmi meglio 
         con le persone e a lavorare di squadra per un unico obiettivo di gruppo.</p>
@@ -76,16 +76,9 @@ const Contatti = ()=>{
         <Instagram color='#E1306C' className='socialicon' onClick={()=> window.open("https://www.instagram.com/vincenzodnm/", "_blank")}/>
         <Linkedin color='#0a66c2' className='socialicon' onClick={()=> window.open("https://www.linkedin.com/in/vincenzo-donnarumma-2625a51a2/", "_blank")}/>
         </div>
+        <p>Clicca su una delle icone di sopra per trovarmi sui social</p>
       </div>
       <div className='wrappercontacts'>
-        <div className='wrapper'>
-        <Mailbox  color='#F0FFF0' className='socialicon' id='mail'/>
-        <button className='mailto' onClick={() => window.location = 'mailto:vincenzodnm@outlook.it'}>E-mail</button>
-        </div>
-        <div className='wrapper'>
-        <PhoneVibrate  color='#F0FFF0' className='socialicon' id='call'/>
-        <span className='call'>3458800962</span>
-        </div>
       </div>
     </div>
   );
@@ -105,7 +98,6 @@ function App() {
   return (
     <div className="App">
       <nav onFocus={(e)=>{
-        e.currentTarget.style.background='rgb(21, 62, 197)';
         e.currentTarget.style.width='350px';
         document.getElementById('touch').style.opacity='0';
         for(let i=0;i<document.getElementsByTagName('a').length;i++){
@@ -115,7 +107,6 @@ function App() {
         }
         }
         onBlur={(e)=>{
-        e.currentTarget.style.background='rgb(5, 18, 58)';
         e.currentTarget.style.width='75px';
         document.getElementById('touch').style.opacity='1';
         for(let i=0;i<document.getElementsByTagName('a').length;i++){
@@ -124,7 +115,7 @@ function App() {
         }
         }
         }>
-        <HandIndex id='touch'></HandIndex>
+        <HandIndex id='touch' ></HandIndex>
         <NavLink to='/'><Person/></NavLink>
         <NavLink to='/Formazione'><Book/></NavLink>
         <NavLink to='/Contatti'><Phone/></NavLink>
