@@ -225,12 +225,12 @@ a{
     align-items: center;
   }
   .knowledgeswrapper .foto{
-    height: 240px;
-    width:calc(240px*16/9);
+    height: 180px;
+    width:calc(180px*16/9);
   }
   .Info .foto{
-    height: 240px;
-    width: calc(240px*16/9);
+    height: 18px;
+    width: calc(180px*16/9);
   }
   #last{
     margin:0;
