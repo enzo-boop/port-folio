@@ -224,12 +224,15 @@ a{
     justify-content: center;
     align-items: center;
   }
+  .knowledgeswrapper p{
+    width: 80%;
+  }
   .knowledgeswrapper .foto{
     height: 180px;
     width:calc(180px*16/9);
   }
   .Info .foto{
-    height: 18px;
+    height: 180px;
     width: calc(180px*16/9);
   }
   #last{
