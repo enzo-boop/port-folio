@@ -224,6 +224,14 @@ a{
     justify-content: center;
     align-items: center;
   }
+  .knowledgeswrapper .foto{
+    height: 240px;
+    width:calc(240px*16/9);
+  }
+  .Info .foto{
+    height: 240px;
+    width: calc(240px*16/9);
+  }
   #last{
     margin:0;
   }
