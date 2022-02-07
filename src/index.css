@@ -77,7 +77,6 @@ p{
 .infowrapper{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 .contactfoo{
   width:100%;
@@ -175,7 +174,7 @@ p{
   text-shadow: 1px 1px 2px black,-1px 1px 2px black,1px -1px 2px black,-1px -1px 2px black;
   text-align: center;
 }
-a{
+nav a{
  display: none;
   opacity: 0;
   transition: ease-in-out all 0.6s;
@@ -183,6 +182,40 @@ a{
   color:white;
   font-size: 20px;
   text-shadow: 1px 1px 2px black,-1px 1px 2px black,1px -1px 2px black,-1px -1px 2px black;
+}
+.project{
+  margin: 30px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project svg{
+  margin:10px 0 10px 0;
+  height: 128px;
+  width: 128px;
+}
+.sunicon{
+  color:rgb(192, 192, 11)
+}
+.routericon{
+  color: #747474;
+}
+.listicon{
+  color:rgb(31, 180, 31);
+}
+.projtext{
+  margin:20px 0 20px 0;
+}
+.projlink{
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  color:white;
+  text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
+}
+.projlink:hover{
+  color:rgb(240, 0, 0)
 }
 .foto{
   border-radius: 10%;
@@ -241,9 +274,17 @@ a{
   .Info .foto{
     height: 280px;
     width:calc(240px*9/7);
-    margin-bottom: 5px;
+    margin:40px 0 0 0;
   }
   #last{
     margin:0;
   }
+}
+@media screen and (max-width: 600px){
+.fotowrapper{
+  height: 340px;
+}
+.infowrapper{
+  flex-wrap: wrap;
+}
 }

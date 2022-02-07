@@ -3,7 +3,7 @@ import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex, SendFill} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex, SendFill, Sun, Router, ListColumns} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
@@ -100,6 +100,15 @@ const Progetti = ()=>{
     <div className='Projects'>
       <h1>Progetti</h1>
       <div className='wrapper'>
+        <div className='project'><Sun className='sunicon'/><p className='projpar'>
+          App meteo</p></div>
+        <div className='project'><Router className='routericon'/><p className='projpar'>
+          Template di sito web con react-router-v6</p></div>
+        <div className='project'><ListColumns className='listicon'/><p className='projpar'>
+          App lista To-Do</p></div>
+      </div>
+      <div className='projtext'>
+        <p className='projpar'>Puoi trovare i miei progetti su: <a className='projlink' href='https://github.com/enzo-boop'>CLICCA QUESTO LINK GITHUB</a></p>
       </div>
     </div>
   );
