@@ -7,7 +7,7 @@ src: local('Roboto'), url(./Roboto-Black.ttf) format('opentype');
   font-family:'Roboto';
 }
 body{
-  background: fixed radial-gradient(ellipse at top, #1b1b1b, #08091d);
+  background: fixed  #08091d;
   height: 100%;
   overflow-y: scroll;
 }
