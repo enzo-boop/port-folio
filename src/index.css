@@ -1,6 +1,10 @@
+@font-face{
+font-family: 'Roboto';
+src: local('Roboto'), url(./Roboto-Black.ttf) format('opentype');
+}
 .App{
   z-index: 0;
-  font-family: monospace;
+  font-family:'Roboto';
 }
 body{
   background: fixed radial-gradient(ellipse at top, #1b1b1b, #08091d);
@@ -104,8 +108,6 @@ p{
 }
 .socialmedia{
   height: 128px;
-  background: linear-gradient(180deg,rgb(17, 17, 17),rgba(17, 17, 17, 0.63),rgba(56, 56, 56, 0));
-  filter: blur(60%);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -124,7 +126,6 @@ p{
   justify-content: center;
   align-items: center;
   min-height: 160px;
-  background: rgba(255, 255, 255, 0.219);
   padding: 5px;
   margin: 20px 15px 0px 15px ;
   text-align: center;
