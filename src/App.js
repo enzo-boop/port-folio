@@ -3,7 +3,7 @@ import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex, ChatLeft, Arrow90degRight, ArrowBarRight, Send, SendFill, SendPlus} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
@@ -78,7 +78,18 @@ const Contatti = ()=>{
         </div>
         <p>Clicca su una delle icone di sopra per trovarmi sui social</p>
       </div>
-      <div className='wrappercontacts'>
+      <div className='contactfoo'>
+        <span className='email' style={{background:'rgb(21, 62, 197)',fontVariant:'all-small-caps',fontFamily:'sans-serif',padding:'5px',fontSize:'20px',textShadow:'0.5px 0.5px black,0.5px -0.5px black,-0.5px -0.5px black,-0.5px 0.5px black',color:'rgb(240,240,240)'}}>E-mail e Cellulare</span>
+        <div className='grid'>
+      <div className='sectionemail'>
+      <p>Invia una mail</p>
+      <button className='send' onClick={()=>{window.location='mailto:vincenzodnm@outlook.it'}} style={{transition:'ease-in-out 0.6s all',filter:'brightness(0.35)',cursor:'pointer',width:'120px',height:'32px',padding:'5px',background:'rgb(21, 62, 197)',color:'white',borderRadius:'5px'}}><Send/></button>
+      </div>
+      <div className='sectionphone'>
+      <p>Chiama Cellulare</p>
+      <span style={{height:'32px'}} className='call'>+393458800962</span>
+      </div>
+      </div>
       </div>
     </div>
   );
@@ -93,28 +104,47 @@ const Progetti = ()=>{
     </div>
   );
 }
+const Expandcheck=()=>{
+  console.log('nav has been clicked');
+ document.getElementsByTagName('nav')[0].style.width==='350px'?console.log('nav already expanded'):Expand();
+}
+const Expand=()=>{
+ document.getElementById('touch').style.opacity='0';
+ document.getElementsByTagName('nav')[0].style.width='350px'
+  for(let i=0;i<document.getElementsByTagName('a').length;i++){
+    document.getElementsByTagName('a')[i].style.display='flex';
+    document.getElementsByTagName('a')[i].style.justifyContent='center';
+    document.getElementsByTagName('a')[i].style.opacity='1';
+    document.getElementsByTagName('a')[i].style.transition='all ease-in-out 0.3s';
+}
+console.log('nav expanded');
+}
+const Hide=()=>{
+  console.log('nav not clicked');
+  document.getElementsByTagName('nav')[0].style.width='75px';
+  document.getElementById('touch').style.opacity='1';
+   for(let i=0;i<document.getElementsByTagName('a').length;i++){
+     document.getElementsByTagName('a')[i].style.opacity='0';
+   }
+   setTimeout(() => {
+    for(let i=0;i<document.getElementsByTagName('a').length;i++){
+      document.getElementsByTagName('a')[i].style.display='none';
+    }
+    console.log('nav has been hidden')
+   }, 300);
+}
+const Navhandleclick=(ev)=>{
+  ev.target===document.getElementsByTagName('nav')[0]?
+  Expandcheck():
+  document.getElementsByTagName('nav')[0].style.width==='75px'?
+  console.log('nav is already hidden'):
+  Hide();
+}
 function App() {
   const location = useLocation();
   return (
-    <div className="App">
-      <nav onFocus={(e)=>{
-        e.currentTarget.style.width='350px';
-        document.getElementById('touch').style.opacity='0';
-        for(let i=0;i<document.getElementsByTagName('a').length;i++){
-          document.getElementsByTagName('a')[i].style.opacity='1';
-          document.getElementsByTagName('a')[i].style.transition='all ease-in-out 0.6s';
-        }
-        }
-        }
-        onBlur={(e)=>{
-        e.currentTarget.style.width='75px';
-        document.getElementById('touch').style.opacity='1';
-        for(let i=0;i<document.getElementsByTagName('a').length;i++){
-          document.getElementsByTagName('a')[i].style.opacity='0';
-          document.getElementsByTagName('a')[i].style.transition='all ease-in-out 0.1s';
-        }
-        }
-        }>
+    <div className="App" onClick={(e)=>{Navhandleclick(e);}}>
+      <nav>
         <HandIndex id='touch' ></HandIndex>
         <NavLink to='/'><Person/></NavLink>
         <NavLink to='/Formazione'><Book/></NavLink>
