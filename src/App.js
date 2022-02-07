@@ -3,7 +3,7 @@ import foto from './foto.jpg';
 import knowledge from './knowledge.png';
 import {Routes, Route, NavLink, useLocation} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex, ChatLeft, Arrow90degRight, ArrowBarRight, Send, SendFill, SendPlus} from 'react-bootstrap-icons';
+import { Book,Phone,FileEarmarkPost, Person, Facebook, Instagram, Linkedin,  HandIndex, SendFill} from 'react-bootstrap-icons';
 
 const Info = ()=>{
   return(
@@ -83,7 +83,7 @@ const Contatti = ()=>{
         <div className='grid'>
       <div className='sectionemail'>
       <p>Invia una mail</p>
-      <button className='send' onClick={()=>{window.location='mailto:vincenzodnm@outlook.it'}} style={{transition:'ease-in-out 0.6s all',filter:'brightness(0.35)',cursor:'pointer',width:'120px',height:'32px',padding:'5px',background:'rgb(21, 62, 197)',color:'white',borderRadius:'5px'}}><Send/></button>
+      <button className='send' onClick={()=>{window.location='mailto:vincenzodnm@outlook.it'}} style={{transition:'ease-in-out 0.6s all',filter:'brightness(0.35)',cursor:'pointer',width:'120px',height:'32px',padding:'5px',background:'rgb(21, 62, 197)',color:'white',borderRadius:'5px'}}><SendFill/></button>
       </div>
       <div className='sectionphone'>
       <p>Chiama Cellulare</p>
