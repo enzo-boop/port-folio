@@ -120,11 +120,11 @@ const Expandcheck=()=>{
 const Expand=()=>{
  document.getElementById('touch').style.opacity='0';
  document.getElementsByTagName('nav')[0].style.width='350px'
-  for(let i=0;i<document.getElementsByTagName('a').length;i++){
-    document.getElementsByTagName('a')[i].style.display='flex';
-    document.getElementsByTagName('a')[i].style.justifyContent='center';
-    document.getElementsByTagName('a')[i].style.opacity='1';
-    document.getElementsByTagName('a')[i].style.transition='all ease-in-out 0.3s';
+  for(let i=0;i<document.getElementsByClassName('navlink').length;i++){
+    document.getElementsByClassName('navlink')[i].style.display='flex';
+    document.getElementsByClassName('navlink')[i].style.justifyContent='center';
+    document.getElementsByClassName('navlink')[i].style.opacity='1';
+    document.getElementsByClassName('navlink')[i].style.transition='all ease-in-out 0.3s';
 }
 console.log('nav expanded');
 }
@@ -132,12 +132,12 @@ const Hide=()=>{
   console.log('nav not clicked');
   document.getElementsByTagName('nav')[0].style.width='75px';
   document.getElementById('touch').style.opacity='1';
-   for(let i=0;i<document.getElementsByTagName('a').length;i++){
-     document.getElementsByTagName('a')[i].style.opacity='0';
+   for(let i=0;i<document.getElementsByClassName('navlink').length;i++){
+     document.getElementsByClassName('navlink')[i].style.opacity='0';
    }
    setTimeout(() => {
-    for(let i=0;i<document.getElementsByTagName('a').length;i++){
-      document.getElementsByTagName('a')[i].style.display='none';
+    for(let i=0;i<document.getElementsByClassName('navlink').length;i++){
+      document.getElementsByClassName('navlink')[i].style.display='none';
     }
     console.log('nav has been hidden')
    }, 300);
@@ -155,10 +155,10 @@ function App() {
     <div className="App" onClick={(e)=>{Navhandleclick(e);}}>
       <nav>
         <HandIndex id='touch' ></HandIndex>
-        <NavLink to='/'><Person/></NavLink>
-        <NavLink to='/Formazione'><Book/></NavLink>
-        <NavLink to='/Contatti'><Phone/></NavLink>
-        <NavLink to='/Progetti'><FileEarmarkPost/></NavLink>
+        <NavLink className='navlink' to='/'><Person/></NavLink>
+        <NavLink className='navlink' to='/Formazione'><Book/></NavLink>
+        <NavLink className='navlink' to='/Contatti'><Phone/></NavLink>
+        <NavLink className='navlink' to='/Progetti'><FileEarmarkPost/></NavLink>
       </nav>
       <TransitionGroup>
       <CSSTransition key={location.key} classNames="fade" timeout={300}>
